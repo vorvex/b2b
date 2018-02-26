@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'dashboard/index'
+  devise_for :admins
+  get 'dashboard', to: 'dashboard#index'
 
   root 'interface#index'
 
